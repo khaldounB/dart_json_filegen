@@ -19,6 +19,7 @@ class FileGenerator {
   /// - [jsonString]: The JSON string that defines the fields and their types.
   Future<void> createFile({
     required String pathSegment,
+    required String app,
     required String fileName,
     required String className,
     required String folder,
@@ -34,7 +35,7 @@ class FileGenerator {
     }
 
     // Construct the full directory path where the file will be created
-    final directoryPath = 'lib/features/$pathSegment/data/$folder';
+    final directoryPath = 'lib/$app/features/$pathSegment/data/$folder';
     // Construct the full file path with the .dart extension
     final filePath = '$directoryPath/$fileName.dart';
 
